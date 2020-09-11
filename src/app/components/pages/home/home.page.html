@@ -1,0 +1,73 @@
+<div class="hero-banner">
+  <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide [ngStyle]="{'background-image': 'url(./assets/img/hero_banner/50off-desk.jpg)'}">
+          <span>DESCUBRE TECHNOMARINE</span>
+      </ion-slide>
+      <ion-slide [ngStyle]="{'background-image': 'url(./assets/img/hero_banner/70off-desk.jpg)'}">
+          <span>DESCUBRE TECHNOMARINE</span>
+      </ion-slide>
+  </ion-slides>
+</div>
+<div class="carrousel">
+    <div class="offer"><span class="title">OFERTAS ESPECIALES</span> <span><ion-icon name="caret-down-outline"></ion-icon></span></div>
+    <ion-slides pager="true" [options]="slideOpts2">
+        <ion-slide *ngFor="let item of data">
+            <div class="img" [ngStyle]="{'background-image': 'url('+item.image+')'}"></div>
+            <div class="description">
+                <div class="title">
+                    <h1>{{item.title}}</h1>
+                    <span>{{item.subtitle}}</span>
+                </div>
+                <p>{{item.description}}</p>
+                <span class="price">{{item.price  | currency:'COP':'symbol-narrow':'3.0':'es'}}</span>
+                <span class="discount">{{item.discount  | currency:'COP':'symbol-narrow':'3.0':'es'}}</span>
+
+                <a href="">Comprar</a>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</div>
+<div class="banner-cta">
+    <img src="./assets/img/banner_cta/techno11.jpg" alt="">
+    <span>ESTILO TECHNOMARINE</span>
+</div>
+<div class="collection">
+    <div class="social">
+        <ul>
+            <li><a href="https://www.facebook.com/" target="_blank" class="icon-facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="icon-instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://web.whatsapp.com/" target="_blank" class="icon-wp"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+        </ul>
+    </div>
+    <div class="offer"><span class="title">COLECCIÓN DEL MES</span> <span><ion-icon name="caret-down-outline"></ion-icon></span></div>
+    <div class="img" [ngStyle]="{'background-image': 'url(https://cdn.shopify.com/s/files/1/0343/2824/8459/files/banner-manta-collection-01.jpg?v=1596560896)'}"></div>
+    <ion-slides pager="true" [options]="slideOpts3">
+        <ion-slide *ngFor="let item of data">
+            <div class="img" [ngStyle]="{'background-image': 'url('+item.image+')'}"></div>
+            <div class="description">
+                <div class="title">
+                    <h1>{{item.title}}</h1>
+                    <span>{{item.subtitle}}</span>
+                </div>
+                <p>{{item.description}}</p>
+                <span class="discount">{{item.discount  | currency:'COP':'symbol-narrow':'3.0':'es'}}</span>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</div>
+<div class="fan">
+    <div class="offer"><span class="title">CONVIERTETE EN UN FAN DE TECHNOMARINE</span></div>
+    <div class="form">
+        <h3 class="title">INSCRÍBETE A NUESTRO NEWSLETTER Y RECIBE UN 10% DE DESCUENTO EN TUS COMPRAS ONLINE</h3>
+        <form action="">
+            <div class="content">
+                <input type="text" placeholder="Tu correo electrónico">
+                <a href="">Enviar</a>
+            </div>
+            <div class="terms">
+                <ion-checkbox color="primary" checked="true"></ion-checkbox> <span>Al ingresar mi correo acepto los<span>términos y condiciones.</span></span>
+            </div>
+        </form>
+    </div>
+</div>
+

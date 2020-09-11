@@ -1,0 +1,134 @@
+ion-header {
+  width: 100%;
+  height: 80px;
+  background: #1A7FD8;
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    img {
+      max-width: 230px;
+      cursor: pointer;
+    }
+    .menu {
+      width: 1690px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .search {
+        width: 500px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .list {
+        width: 410px;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          height: 100%;
+          display: flex;
+          ion-icon {
+            color: white;
+            font-size: 25px;
+            margin-left: 20px;
+          }
+          span {
+            color: white;
+            padding-left: 10px;
+            height: 100%;
+            font-size: 13px;
+          }
+        }
+        a:last-child {
+          align-items: center;
+          border-left: 1px solid white;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+header {
+  width: 100%;
+  height: 80px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  z-index: 2;
+  background: black;
+  .list {
+    display: flex;
+    justify-content: flex-start;
+    width: 600px;
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 30px;
+      &:hover {
+        color: #46b0e0;
+      }
+    }
+  }
+}
+.menu-mobile {
+  ion-icon {
+    color: white;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    font-size: 35px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 1920px) {
+  ion-header {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+  .content, header {
+    display: none !important;
+  }
+  .menu-mobile {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .content, header {
+    display: none !important;
+  }
+  .menu-mobile {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .content, header {
+    display: none !important;
+  }
+  .menu-mobile {
+    display: block !important;
+  }
+}
